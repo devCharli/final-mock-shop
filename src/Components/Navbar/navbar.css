@@ -1,0 +1,88 @@
+/* navbar section */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.title {
+  margin-right: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-icon {
+  margin: 0 8px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.logout {
+  cursor: pointer;
+}
+
+.search-form {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.search-form-wrap {
+  height: 0;
+  overflow: hidden;
+  transition: height 4000s ease-in-out;
+}
+
+.search-input {
+  font-size: 20px;
+  border: none;
+  border-bottom: 1px solid #dbdbdb;
+  background-color: transparent;
+  letter-spacing: 0.5px;
+  padding: 5px;
+  font-style: italic;
+}
+
+.search-btn {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+}
+
+.search-input:focus {
+  outline: 0;
+}
+
+.undo-btn {
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.search-result {
+  text-align: center;
+  margin: 30px;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.favorite-list {
+  border: 1px solid #dedede;
+  padding: 8px 12px;
+  margin: 5px 0;
+  margin-top: 0;
+  font-size: 12px;
+  cursor: pointer;
+}

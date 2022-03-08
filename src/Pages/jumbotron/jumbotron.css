@@ -1,0 +1,57 @@
+/* jumbotron section */
+
+.jumbotron {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 130px 100px 100px 100px;
+}
+
+.jumbo-img {
+  width: 300px;
+  height: auto;
+}
+
+.jumbo-description {
+  padding: 100px;
+}
+
+.jumbo-description button {
+  width: 100%;
+  background-color: #616161;
+  color: #e0e0e0;
+  border: none;
+  padding: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+  .jumbotron {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .jumbo-img {
+    width: 150px;
+    height: auto;
+  }
+
+  .jumbo-description {
+    padding: 25px;
+  }
+
+  .jumbo-description button {
+    width: 100%;
+    background-color: #616161;
+    color: #e0e0e0;
+    border: none;
+    padding: 6px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+}

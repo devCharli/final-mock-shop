@@ -1,0 +1,67 @@
+/* Mainpage all prducts section */
+
+.all-items {
+  text-align: center;
+}
+
+.sort {
+  float: right;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.sort:focus {
+  outline: 0;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.item {
+  width: 300px;
+  padding: 30px;
+  margin: 10px;
+}
+
+.item img {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 10px;
+}
+
+.item-exclusive {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.item-heart {
+  cursor: pointer;
+}
+
+.item-heart-fill {
+  color: red;
+}
+
+.item hr {
+  border: 1px solid #e3e6e4;
+}
+
+.item-info h3 {
+  font-size: 14px;
+  margin: 20px 0 5px 0;
+}
+
+.item-info p {
+  color: var(--main-text-color);
+  font-weight: 700;
+  margin: 0;
+  font-size: 20px;
+}
