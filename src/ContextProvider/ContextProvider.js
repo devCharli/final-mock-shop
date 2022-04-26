@@ -4,6 +4,7 @@ import useFetch from "../Hook/useFetch";
 export const ItemContext = createContext();
 
 const ContextProvider = (props) => {
+  // check login status
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
     const savedLoggedIn = localStorage.getItem("login");
     if (savedLoggedIn) {
@@ -12,6 +13,7 @@ const ContextProvider = (props) => {
       return false;
     }
   });
+  // cart info
   const [cart, setCart] = useState(() => {
     const savedCart = localStorage.getItem("cart");
     if (savedCart) {
@@ -20,7 +22,7 @@ const ContextProvider = (props) => {
       return [];
     }
   });
-
+  // order info
   const [order, setOrder] = useState(() => {
     const savedOrder = localStorage.getItem("order");
     if (savedOrder) {

@@ -41,3 +41,17 @@
   cursor: pointer;
   margin: 10px 0;
 }
+
+@media screen and (max-width: 576px) {
+  .product-info {
+    flex-direction: column;
+  }
+
+  .product-description {
+    padding: 0;
+  }
+
+  .total-price {
+    width: 300px;
+  }
+}

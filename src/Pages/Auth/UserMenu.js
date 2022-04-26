@@ -1,13 +1,15 @@
 import "./auth.css";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { ItemContext } from "../../ContextProvider/ContextProvider";
 
 const UserMenu = ({ setIsLoggedIn, setShowMyPage }) => {
   const email = localStorage.getItem("email");
-  let id = email.match(/\w+/)[0];
-
+  // const id = email.match(/\w+/)[0];
+  const { setOrder } = useContext(ItemContext);
   return (
     <div className="user-menu">
-      <h3>Welcome back {id}</h3>
+      {email && <h3>Hello, {email.match(/\w+/)[0]}!</h3>}
       <Link
         to="/profile"
         onClick={() => setShowMyPage(false)}
@@ -21,8 +23,9 @@ const UserMenu = ({ setIsLoggedIn, setShowMyPage }) => {
         onClick={() => {
           setIsLoggedIn(false);
           setShowMyPage(false);
-          localStorage.setItem("login", false);
           localStorage.clear();
+          localStorage.setItem("login", false);
+          setOrder([]);
         }}
       >
         SIGN OUT

@@ -1,7 +1,8 @@
 import "./payment.css";
 import { useContext, useState, useEffect } from "react";
 import { ItemContext } from "../../ContextProvider/ContextProvider";
-import { FaPlus, FaMinus } from "react-icons/fa";
+import { FaPlus, FaMinus, FaShoppingCart } from "react-icons/fa";
+
 import Payment from "./Payment";
 const Cart = () => {
   const { cart, setCart } = useContext(ItemContext);
@@ -15,7 +16,7 @@ const Cart = () => {
     setTotal(totalPrice);
   };
 
-  //useEffect를 쓰지 않으면 상품에서 cart로 갈때 total이 계산되지 않음
+  // if not using useEffect, total calculation doesn't work
 
   useEffect(() => {
     const calculateTotal = () => {
@@ -54,42 +55,42 @@ const Cart = () => {
   return (
     <div className="container">
       <div className="cart">
-        <h3>Cart</h3>
-        <table className="cart-table">
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>Price</th>
-              <th>Quantity</th>
-              <th>Add</th>
-              <th>Remove</th>
-            </tr>
-          </thead>
-          <tbody className="cart-table-body">
+        <h3>
+          CART <FaShoppingCart />
+        </h3>
+        <div className="cart-table">
+          <div className="cart-head">
+            <ul>
+              <li>Title</li>
+              <li>Price</li>
+              <li>Quan</li>
+              <li>Add</li>
+              <li>Rem</li>
+            </ul>
+          </div>
+          <div className="cart-head">
             {cart &&
               cart.map((item, index) => {
                 return (
-                  <tr key={item.id}>
-                    <td>{item.title}</td>
-                    <td>{item.price * item.count}</td>
-                    <td>{item.count}</td>
-                    <td onClick={() => handleChange(index)}>
+                  <ul key={item.id}>
+                    <li>{item.title}</li>
+                    <li>${item.price * item.count}</li>
+                    <li>{item.count}</li>
+                    <li onClick={() => handleChange(index)}>
                       <FaPlus />
-                    </td>
-                    <td onClick={() => handleDecrease(index)}>
+                    </li>
+                    <li onClick={() => handleDecrease(index)}>
                       <FaMinus />
-                    </td>
-                  </tr>
+                    </li>
+                  </ul>
                 );
               })}
-          </tbody>
-        </table>
-        <table>
-          <tr>
-            <td>Total</td>
-            <td>${total}</td>
-          </tr>
-        </table>
+          </div>
+        </div>
+        <div className="total-price">
+          <p>Total</p>
+          <p>${total}</p>
+        </div>
       </div>
       <Payment total={total} />
     </div>

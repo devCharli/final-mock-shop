@@ -1,11 +1,11 @@
 /* login page */
 
 .login-form {
-  padding: 100px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .form-control {
-  width: 500px;
   margin: 0 auto;
 }
 
